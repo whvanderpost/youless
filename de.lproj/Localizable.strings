@@ -1,0 +1,44 @@
+/* 
+   Localizable.strings
+   YouLess
+
+   German
+   
+   Created by Wouter van der Post on 23-01-11.
+   Copyright 2012 YouLess. All rights reserved.
+ */
+
+"ErrorLabel" = "Verbindungsfehler zu YouLess";
+"ErrorTitle" = "Fehler";
+"InfoTitle" = "Information";
+"WattLabel" = "Watt";
+
+"AppTitle" = "YouLess";
+"AppTitleSim" = "YouLess - Simulation";
+
+"AboutVersion" = "Version";
+
+"SettingsTitle" = "Einstellungen";
+"SettingsNetworkHeader" = "Netzwerk";
+"SettingsViewHeader" = "Anzeigeoptionen";
+
+"SettingsHostnameLabel" = "IP Adresse";
+"SettingsPasswordLabel" = "Passwort";
+"SettingsPortLabel" = "Port";
+"SettingsThresholdLabel" = "Empfindlichkeit (Watt)";
+"SettingsUpdateLabel" = "Update-frequenz";
+"SettingsSimulatorLabel" = "Simulator";
+"SettingsLockLabel" = "Standby verhindern";
+
+"SettingsUpdate100" = "0,1 Sekunde";
+"SettingsUpdate200" = "0,2 Sekunden";
+"SettingsUpdate500" = "0,5 Sekunden";
+"SettingsUpdate1000" = "1 Sekunde";
+"SettingsUpdate2000" = "2 Sekunden";
+"SettingsUpdate5000" = "5 Sekunden";
+
+"ConnectionError" = "Verbindungsfehler (%@)";
+"AuthenticationError" = "Falsches Passwort; bitte uberprufen.";
+"InvalidResult" = "Falsche Antwort von IP Adresse (%@) empfangen, uberprufen Sie die IP Adresse.";
+"IpTimeout" = "Zeituberschreitung bei Verbindung zu YouLess %@ Port %@, uberprufen Sie die Adresse und/oder die Netzwerkverbindung.";
+"FirstTime" = "Beim ersten Start der Anwendung muss die IP Adresse des YouLess in Einstellungen gesetzt werden.";

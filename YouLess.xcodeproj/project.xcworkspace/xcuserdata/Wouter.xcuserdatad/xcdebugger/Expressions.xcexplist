@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[Authentication connection:didReceiveData:]:Authentication.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[Authentication connectionDidFinishLoading:]:Authentication.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_authenticated">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[Authentication authenticate:]:Authentication.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_conn">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MainViewController(Private) stopMonitoring]:MainViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_conn">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[CustomUrlConnection appendData:]:CustomUrlConnection.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_data">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[Authentication connection:didReceiveResponse:]:Authentication.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_conn">
+            </PersistentString>
+            <PersistentString
+               value = "_authenticated">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

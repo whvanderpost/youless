@@ -1,0 +1,44 @@
+/* 
+   Localizable.strings
+   YouLess
+
+   Dutch
+   
+   Created by Wouter van der Post on 23-01-11.
+   Copyright 2012 YouLess. All rights reserved.
+ */
+
+"ErrorLabel" = "Fout bij verbinden met YouLess";
+"ErrorTitle" = "Fout";
+"InfoTitle" = "Informatie";
+"WattLabel" = "watt";
+
+"AppTitle" = "YouLess";
+"AppTitleSim" = "YouLess - Simulatie";
+
+"AboutVersion" = "versie";
+
+"SettingsTitle" = "Instellingen";
+"SettingsNetworkHeader" = "Netwerk";
+"SettingsViewHeader" = "Weergave opties";
+
+"SettingsHostnameLabel" = "IP adres";
+"SettingsPasswordLabel" = "Wachtwoord";
+"SettingsPortLabel" = "Poort";
+"SettingsThresholdLabel" = "Gevoeligheid (Watt)";
+"SettingsUpdateLabel" = "Verversingssnelheid";
+"SettingsSimulatorLabel" = "Simulator";
+"SettingsLockLabel" = "Voorkom Stand-by";
+
+"SettingsUpdate100" = "0,1 seconde";
+"SettingsUpdate200" = "0,2 seconden";
+"SettingsUpdate500" = "0,5 seconden";
+"SettingsUpdate1000" = "1 seconde";
+"SettingsUpdate2000" = "2 seconden";
+"SettingsUpdate5000" = "5 seconden";
+
+"ConnectionError" = "Er is een connectie fout opgetreden (%@)";
+"AuthenticationError" = "Ongeldig wachtwoord, controleer het wachtwoord en probeer het nogmaals.";
+"InvalidResult" = "Ongeldig antwoord ontvangen van het opgegeven IP adres (%@), controleer het IP adres en probeer het nogmaals.";
+"IpTimeout" = "Er is een timeout opgetreden bij het verbinden met de YouLess op %@ poort %@, controleer het IP adres en/of de netwerk verbinding.";
+"FirstTime" = "Dit is de eerste keer dat u de applicatie start, stel het IP adres van de YouLess in via het instellingen scherm.";

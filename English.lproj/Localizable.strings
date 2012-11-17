@@ -1,0 +1,44 @@
+/* 
+   Localizable.strings
+   YouLess
+
+   English
+   
+   Created by Wouter van der Post on 23-01-11.
+   Copyright 2012 YouLess. All rights reserved.
+ */
+
+"ErrorLabel" = "Could not connect to YouLess";
+"ErrorTitle" = "Error";
+"InfoTitle" = "Information";
+"WattLabel" = "watt";
+
+"AppTitle" = "YouLess";
+"AppTitleSim" = "YouLess - Simulating";
+
+"AboutVersion" = "version";
+
+"SettingsTitle" = "Settings";
+"SettingsNetworkHeader" = "Network";
+"SettingsViewHeader" = "Display options";
+
+"SettingsHostnameLabel" = "IP address";
+"SettingsPasswordLabel" = "Password";
+"SettingsPortLabel" = "Port";
+"SettingsThresholdLabel" = "Sensitivity (Watt)";
+"SettingsUpdateLabel" = "Update Frequency";
+"SettingsSimulatorLabel" = "Simulator";
+"SettingsLockLabel" = "Prevent Stand-by";
+
+"SettingsUpdate100" = "0.1 second";
+"SettingsUpdate200" = "0.2 seconds";
+"SettingsUpdate500" = "0.5 seconds";
+"SettingsUpdate1000" = "1 second";
+"SettingsUpdate2000" = "2 seconds";
+"SettingsUpdate5000" = "5 seconds";
+
+"ConnectionError" = "A connection error has occured (%@)";
+"AuthenticationError" = "Invalid password, check the password and try again.";
+"InvalidResult" = "Invalid response received from the given IP address (%@), check the IP address and try again.";
+"IpTimeout" = "A timeout occurred connecting to the YouLess at %@ port %@, check the IP address and/or network connectivity.";
+"FirstTime" = "This is the first time this application is started, set the IP address of the YouLess using the settings screen.";
