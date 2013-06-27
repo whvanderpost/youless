@@ -534,64 +534,37 @@
 		max = 100;
 		wattValue = 0;
         [self setGaugeImage:@"gauge_off.png" hiddenGauge:hiddenGauge visibleGauge:visibleGauge duration:duration];
-		//if([visibleGauge image] != [UIImage imageNamed: @"gauge_off.png"])
-		//	[_gauge setImage:[UIImage imageNamed: @"gauge_off.png"]];
 	}
 	else if(wattValue <= 600)
 	{
 		max = 600;
         [self setGaugeImage:@"gauge_green.png" hiddenGauge:hiddenGauge visibleGauge:visibleGauge duration:duration];
-//		if([visibleGauge image] != [UIImage imageNamed: @"gauge_green.png"])
-//        {
-//            [hiddenGauge setImage:[UIImage imageNamed: @"gauge_green.png"]];
-//            [UIView beginAnimations:@"Fade" context:nil];
-//            [UIView setAnimationDuration:duration];
-//            [UIView setAnimationDelay:0.0];
-//            [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-//            
-//            hiddenGauge.alpha = 1.0;
-//            visibleGauge.alpha = 0.0;
-//            
-//            [UIView commitAnimations];
-//            
-//			//[_gauge setImage:[UIImage imageNamed: @"gauge_green.png"]];
-//        }
 	}
 	else if(wattValue > 600 && wattValue <= 1500)
 	{
 		max = 1500;
         [self setGaugeImage:@"gauge_yellow.png" hiddenGauge:hiddenGauge visibleGauge:visibleGauge duration:duration];
-//		if([_gauge image] != [UIImage imageNamed: @"gauge_yellow.png"])
-//			[_gauge setImage:[UIImage imageNamed: @"gauge_yellow.png"]];
 	}
 	else if(wattValue > 1500 && wattValue <= 3000)
 	{
 		max = 3000;
         [self setGaugeImage:@"gauge_orange.png" hiddenGauge:hiddenGauge visibleGauge:visibleGauge duration:duration];
-//		if([_gauge image] != [UIImage imageNamed: @"gauge_orange.png"])
-//			[_gauge setImage:[UIImage imageNamed: @"gauge_orange.png"]];
 	}
 	else if(wattValue > 3000 && wattValue <= 6000)
 	{
 		max = 6000;
         [self setGaugeImage:@"gauge_red.png" hiddenGauge:hiddenGauge visibleGauge:visibleGauge duration:duration];
-//		if([_gauge image] != [UIImage imageNamed: @"gauge_red.png"])
-//			[_gauge setImage:[UIImage imageNamed: @"gauge_red.png"]];
 	}
     else if(wattValue > 6000 && wattValue <= MAX_GAUGE)
 	{
 		max = MAX_GAUGE;
         [self setGaugeImage:@"gauge_tilt.png" hiddenGauge:hiddenGauge visibleGauge:visibleGauge duration:duration];
-//		if([_gauge image] != [UIImage imageNamed: @"gauge_tilt.png"])
-//			[_gauge setImage:[UIImage imageNamed: @"gauge_tilt.png"]];
 	}
 	else
 	{
 		max = MAX_GAUGE;
 		wattValue = MAX_GAUGE;
         [self setGaugeImage:@"gauge_tilt.png" hiddenGauge:hiddenGauge visibleGauge:visibleGauge duration:duration];
-//		if([_gauge image] != [UIImage imageNamed: @"gauge_tilt.png"])
-//			[_gauge setImage:[UIImage imageNamed: @"gauge_tilt.png"]];
 	}
 	
 	// Set the text of the label that indicates the current Watt value.
@@ -670,17 +643,6 @@
                          }
                          completion:^(BOOL finished) { }
          ];
-        
-//		[UIView beginAnimations:@"Fade" context:nil];
-//		[UIView setAnimationDuration:0.5];
-//		[UIView setAnimationDelay:1.0];
-//		[UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-//		
-//		for (int i = [_deltaLabels count] - 1; i >= 0; i--) 
-//		{
-//			UIView *current = [_deltaLabels objectAtIndex:i];
-//			current.alpha = 0.0;
-//		}
 		
 		[UIView commitAnimations];
 	}
@@ -746,11 +708,6 @@
                      }
                      completion:^(BOOL finished) { }
      ];
-    
-//	[UIView beginAnimations:@"FadeAndMove" context:nil];
-//	[UIView setAnimationDuration:deltaAnimationDuration];
-//	[UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-//  [UIView setAnimationDidStopSelector:@selector(release)];
 	
 	[UIView commitAnimations];
 }

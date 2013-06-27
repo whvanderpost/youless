@@ -176,7 +176,7 @@
         case 0:
             return 3;
         case 1:
-            return 5;
+            return 4;
     }
     
     return 0;
@@ -352,17 +352,6 @@
                     return _autoLockCell;
                 case 3:
                     // Simulator (Switch)
-                    _simulatorCell = (SwitchCell *)[self cellFromNibWithName:@"SwitchCell" forTableView:tableView];
-                    if(_simulatorCell.tag) // Indicates if the cell came from cache, in which case it doesn't need to be re-initialized.
-                    {
-                        _simulatorCell.cellLabel.text = NSLocalizedString(@"SettingsSimulatorLabel", nil);
-                        _simulatorCell.cellSwitch.on = [[[PreferencesHelper getInstance] getPreferenceForKey:@"simulator"] boolValue];
-                        
-                        _simulatorCell.tag = NO;
-                    }
-                    return _simulatorCell;
-                case 4:
-                    // Show kWh (Switch)
                     _simulatorCell = (SwitchCell *)[self cellFromNibWithName:@"SwitchCell" forTableView:tableView];
                     if(_simulatorCell.tag) // Indicates if the cell came from cache, in which case it doesn't need to be re-initialized.
                     {
