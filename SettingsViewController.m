@@ -15,6 +15,7 @@
 #import "NoteCell.h"
 #import "SelectCell.h"
 #import "Constants.h"
+#import "Common.h"
 
 @implementation SettingsViewController
 
@@ -59,7 +60,7 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
-    self.navigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
     
     UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] 
                                    initWithBarButtonSystemItem:UIBarButtonSystemItemSave
@@ -403,7 +404,7 @@
     {
         SelectCell *cell = (SelectCell *)[tableView cellForRowAtIndexPath:indexPath];
         UpdateIntervalViewController* controller = [[[UpdateIntervalViewController alloc] 
-                                                     initWithNibName:@"SelectView" 
+                                                     initWithNibName:[Common nibNameForDevice:@"SelectView"]
                                                      bundle:nil 
                                                      updateInterval:cell.value] autorelease];
         controller.delegate = self;

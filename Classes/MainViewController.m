@@ -66,6 +66,7 @@
 #import "Reachability.h"
 #import "UIHelper.h"
 #import "Authentication.h"
+#import "Common.h"
 
 
 @interface MainViewController (Private)
@@ -202,6 +203,13 @@
 		_animationDuration = _updateInterval - 0.1;
 	}
 	
+    // If running on a 4 inch device, allow more delta labels.
+    _deltaLabelCount = NUMBER_OF_DELTA_LABELS;
+    if([Common is4InchRetina])
+    {
+        _deltaLabelCount = NUMBER_OF_DELTA_LABELS_568h;
+    }
+    
 	if([firstTime intValue] == 1)
 	{
 		[self reset:YES :YES];
@@ -221,7 +229,6 @@
 	if(simulate)
 	{
 		_navigationBar.title = NSLocalizedString(@"AppTitleSim", nil);
-		return YES;
 	}
 	else
 	{
@@ -338,7 +345,7 @@
         if(refresh || simulating)
         {
             [self setErrorState:NO];
-            
+     
             if([self initializeApp])
             {
                 [self startMonitoring];
@@ -358,6 +365,7 @@
         else
         {
             [self setErrorState:NO];
+
             if([self initializeApp])
             {
                 _forceGaugeUpdate = YES;
@@ -655,9 +663,9 @@
 }
 
 - (void)updateDeltaLabels: (NSNumber *)newValue 
-{
+{    
 	// Do nothing if we don't want delta labels.
-	if(NUMBER_OF_DELTA_LABELS == 0)
+	if(_deltaLabelCount == 0)
 		return;
 	
 	double deltaAnimationDuration = _animationDuration;
@@ -674,7 +682,7 @@
                           delay:0.0
                         options:UIViewAnimationCurveEaseInOut
                      animations:^{
-                         float alphaKey = (1.0 / NUMBER_OF_DELTA_LABELS);
+                         float alphaKey = (1.0 / _deltaLabelCount);
                          
                          // Move all labels one position upwards.
                          for (int i = [_deltaLabels count] - 1; i >= 0; i--)
@@ -685,7 +693,7 @@
                              current.layer.position = newPoint;
                              
                              // Make sure the item that gets faded out to 0 (after this block) is left alone.
-                             if(i > 0 || [_deltaLabels count] < NUMBER_OF_DELTA_LABELS)
+                             if(i > 0 || [_deltaLabels count] < _deltaLabelCount)
                              {
                                  current.alpha = (current.alpha - alphaKey);
                              }
@@ -700,7 +708,7 @@
                          
                          // Pop a label if the queue contains the maximum number of labels.
                          // In the next cycle the dequeue'd label will be disposed.
-                         if([_deltaLabels count] == NUMBER_OF_DELTA_LABELS + 1)
+                         if([_deltaLabels count] == _deltaLabelCount + 1)
                          {
                              _garbageDeltaLabel = [_deltaLabels dequeue];
                              _garbageDeltaLabel.alpha = 0.0;
@@ -965,7 +973,7 @@
 {
     _isInError = NO;
     
-    SettingsViewController *controller = [[SettingsViewController alloc] initWithNibName:@"SettingsView" bundle:nil];
+    SettingsViewController *controller = [[SettingsViewController alloc] initWithNibName:[Common nibNameForDevice:@"SettingsView"] bundle:nil];
     controller.navigationItem.title = NSLocalizedString(@"SettingsTitle", nil);
     
 	UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:controller];
@@ -979,7 +987,7 @@
 
 - (IBAction)showInfo:(id)sender
 {
-    AboutViewController *controller = [[AboutViewController alloc] initWithNibName:@"AboutView" bundle:nil];
+    AboutViewController *controller = [[AboutViewController alloc] initWithNibName:[Common nibNameForDevice:@"AboutView"] bundle:nil];
 	
 	controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
 	[self presentModalViewController:controller animated:YES];

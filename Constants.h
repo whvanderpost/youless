@@ -18,5 +18,6 @@ extern int const DEFAULT_DELTA_THRESHOLD;
 extern int const DEFAULT_AUTO_LOCK;
 extern float const ANIMATION_DURATION;
 extern int const NUMBER_OF_DELTA_LABELS;
+extern int const NUMBER_OF_DELTA_LABELS_568h;
 extern int const SIMULATOR_MODE;
 extern int const MAX_GAUGE;

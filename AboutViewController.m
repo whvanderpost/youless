@@ -34,7 +34,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    
+    // Do any additional setup after loading the view.
     
     _versionLabel.text = [NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"AboutVersion", nil), [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"]];
 }

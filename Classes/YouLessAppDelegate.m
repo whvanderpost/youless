@@ -8,6 +8,7 @@
 
 #import "YouLessAppDelegate.h"
 #import "MainViewController.h"
+#import "Common.h"
 
 @implementation YouLessAppDelegate
 
@@ -20,11 +21,12 @@
 #pragma mark Application lifecycle
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions 
-{        
+{
     // Override point for customization after application launch.  
-
+    self.mainViewController = [[[MainViewController alloc] initWithNibName:[Common nibNameForDevice:@"MainView"] bundle:nil] autorelease];
+    
     // Add the main view controller's view to the window and display.
-    [self.window addSubview:mainViewController.view];
+    self.window.rootViewController = self.mainViewController;
     [self.window makeKeyAndVisible];
 
     return YES;

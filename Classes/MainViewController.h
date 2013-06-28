@@ -38,6 +38,7 @@
 	float _previousDegreesValue;
 	double _animationDuration;
 	NSMutableArray* _deltaLabels;
+    int _deltaLabelCount;
 	UIView* _garbageDeltaLabel;
 	BOOL _simulateUp;
 	BOOL _simulatorMode;
