@@ -8,7 +8,7 @@
 
 #import "YouLessAppDelegate.h"
 #import "MainViewController.h"
-#import "Common.h"
+#import "UIHelper.h"
 
 @implementation YouLessAppDelegate
 
@@ -23,7 +23,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions 
 {
     // Override point for customization after application launch.  
-    self.mainViewController = [[[MainViewController alloc] initWithNibName:[Common nibNameForDevice:@"MainView"] bundle:nil] autorelease];
+    self.mainViewController = [[[MainViewController alloc] initWithNibName:[UIHelper nibNameForDevice:@"MainView"] bundle:nil] autorelease];
     
     // Add the main view controller's view to the window and display.
     self.window.rootViewController = self.mainViewController;

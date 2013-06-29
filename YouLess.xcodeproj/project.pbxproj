@@ -43,7 +43,6 @@
 		6C5F653A177CCE79002B8678 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C5F6539177CCE79002B8678 /* Default.png */; };
 		6C5F653C177CCE7E002B8678 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C5F653B177CCE7E002B8678 /* Default@2x.png */; };
 		6C5F653E177CCE83002B8678 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C5F653D177CCE83002B8678 /* Default-568h@2x.png */; };
-		6C5F6542177CD129002B8678 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C5F6541177CD129002B8678 /* Common.m */; };
 		6C5F6546177CD954002B8678 /* AboutView-568h.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C5F6545177CD954002B8678 /* AboutView-568h.xib */; };
 		6C5F6548177E06D6002B8678 /* MainView-568h.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C5F6547177E06D6002B8678 /* MainView-568h.xib */; };
 		6C5F6555177E0D46002B8678 /* Back-large.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C5F6553177E0D46002B8678 /* Back-large.png */; };
@@ -134,8 +133,6 @@
 		6C5F6539177CCE79002B8678 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		6C5F653B177CCE7E002B8678 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		6C5F653D177CCE83002B8678 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		6C5F6540177CD129002B8678 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
-		6C5F6541177CD129002B8678 /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
 		6C5F6545177CD954002B8678 /* AboutView-568h.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "AboutView-568h.xib"; sourceTree = "<group>"; };
 		6C5F6547177E06D6002B8678 /* MainView-568h.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "MainView-568h.xib"; sourceTree = "<group>"; };
 		6C5F6553177E0D46002B8678 /* Back-large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Back-large.png"; sourceTree = "<group>"; };
@@ -295,8 +292,6 @@
 				6CF34E3F139EB95E00D827E8 /* UIHelper.m */,
 				6C35BAEA13A2C1180044CDC1 /* Constants.h */,
 				6C35BAEB13A2C1180044CDC1 /* Constants.m */,
-				6C5F6540177CD129002B8678 /* Common.h */,
-				6C5F6541177CD129002B8678 /* Common.m */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -575,7 +570,6 @@
 				6CC1EA86151FB7A500DF4D27 /* AboutViewController.m in Sources */,
 				6C6B15E315D5A88400694078 /* Authentication.m in Sources */,
 				6C66893215D6A44900FD9D0D /* KeychainItemWrapper.m in Sources */,
-				6C5F6542177CD129002B8678 /* Common.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,8 +593,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Wouter van der Post (X8RX27KF2P)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Wouter van der Post (X8RX27KF2P)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -609,7 +603,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = YouLess;
-				PROVISIONING_PROFILE = "2A4A12EE-BE8D-42F6-9B76-675BB8678AC8";
+				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				VALID_ARCHS = "armv7 armv7s";
 			};
@@ -619,14 +613,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: PostFossil B.V.";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = YouLess_Prefix.pch;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = YouLess;
-				PROVISIONING_PROFILE = "6DA10C2D-A4D4-4CA9-B4DA-8B15F857D34D";
+				PROVISIONING_PROFILE = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -635,15 +629,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: PostFossil B.V. (7N9AWTQ6KA)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: PostFossil B.V. (7N9AWTQ6KA)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "35C207D7-6C73-4730-B96B-5F120F670426";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "35C207D7-6C73-4730-B96B-5F120F670426";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 			};
 			name = Distribution;
@@ -652,16 +646,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: PostFossil B.V.";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: PostFossil B.V.";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = YouLess_Prefix.pch;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = YouLess;
-				PROVISIONING_PROFILE = "E7BF577A-110F-496A-971F-5477EF8EFA86";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E7BF577A-110F-496A-971F-5477EF8EFA86";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Distribution;
@@ -670,15 +664,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Wouter van der Post (X8RX27KF2P)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Wouter van der Post (X8RX27KF2P)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				"OTHER_CFLAGS[arch=*]" = "-DDEBUG";
 				OTHER_LDFLAGS = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "2A4A12EE-BE8D-42F6-9B76-675BB8678AC8";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -687,15 +682,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: PostFossil B.V. (7N9AWTQ6KA)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Don't Code Sign";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "F5DE062E-3354-4C56-9CB9-D958E234B645";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 			};
 			name = Release;

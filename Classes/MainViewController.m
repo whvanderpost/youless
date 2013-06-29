@@ -6,53 +6,6 @@
 //  Copyright 2012 PostFossil B.V. All rights reserved.
 //
 
-/*
- The images used for the gauge (4 colors) and the needle are based on the 
- images supplied by Apple in the Dashcode template "The Gauge Template". 
- The included Apple disclaimer below applies to these images.
- 
- --- ORIGINAL APPLE DISCLAIMER ---
- 
- Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple Inc.
- ("Apple") in consideration of your agreement to the following terms, and your
- use, installation, modification or redistribution of this Apple software
- constitutes acceptance of these terms.  If you do not agree with these terms,
- please do not use, install, modify or redistribute this Apple software.
- 
- In consideration of your agreement to abide by the following terms, and subject
- to these terms, Apple grants you a personal, non-exclusive license, under
- Apple's copyrights in this original Apple software (the "Apple Software"), to
- use, reproduce, modify and redistribute the Apple Software, with or without
- modifications, in source and/or binary forms; provided that if you redistribute
- the Apple Software in its entirety and without modifications, you must retain
- this notice and the following text and disclaimers in all such redistributions
- of the Apple Software.
- Neither the name, trademarks, service marks or logos of Apple Inc. may be used
- to endorse or promote products derived from the Apple Software without specific
- prior written permission from Apple.  Except as expressly stated in this notice,
- no other rights or licenses, express or implied, are granted by Apple herein,
- including but not limited to any patent rights that may be infringed by your
- derivative works or by other works in which the Apple Software may be
- incorporated.
- 
- The Apple Software is provided by Apple on an "AS IS" basis.  APPLE MAKES NO
- WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION THE IMPLIED
- WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY AND FITNESS FOR A PARTICULAR
- PURPOSE, REGARDING THE APPLE SOFTWARE OR ITS USE AND OPERATION ALONE OR IN
- COMBINATION WITH YOUR PRODUCTS.
- 
- IN NO EVENT SHALL APPLE BE LIABLE FOR ANY SPECIAL, INDIRECT, INCIDENTAL OR
- CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
- GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
- ARISING IN ANY WAY OUT OF THE USE, REPRODUCTION, MODIFICATION AND/OR
- DISTRIBUTION OF THE APPLE SOFTWARE, HOWEVER CAUSED AND WHETHER UNDER THEORY OF
- CONTRACT, TORT (INCLUDING NEGLIGENCE), STRICT LIABILITY OR OTHERWISE, EVEN IF
- APPLE HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- 
- Copyright (C) 2010 Apple Inc. All Rights Reserved.
- */
-
-
 #include <stdlib.h>
 
 #import "MainViewController.h"
@@ -66,7 +19,7 @@
 #import "Reachability.h"
 #import "UIHelper.h"
 #import "Authentication.h"
-#import "Common.h"
+#import "UIHelper.h"
 
 
 @interface MainViewController (Private)
@@ -205,7 +158,7 @@
 	
     // If running on a 4 inch device, allow more delta labels.
     _deltaLabelCount = NUMBER_OF_DELTA_LABELS;
-    if([Common is4InchRetina])
+    if([UIHelper is4InchRetina])
     {
         _deltaLabelCount = NUMBER_OF_DELTA_LABELS_568h;
     }
@@ -973,7 +926,7 @@
 {
     _isInError = NO;
     
-    SettingsViewController *controller = [[SettingsViewController alloc] initWithNibName:[Common nibNameForDevice:@"SettingsView"] bundle:nil];
+    SettingsViewController *controller = [[SettingsViewController alloc] initWithNibName:[UIHelper nibNameForDevice:@"SettingsView"] bundle:nil];
     controller.navigationItem.title = NSLocalizedString(@"SettingsTitle", nil);
     
 	UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:controller];
@@ -987,7 +940,7 @@
 
 - (IBAction)showInfo:(id)sender
 {
-    AboutViewController *controller = [[AboutViewController alloc] initWithNibName:[Common nibNameForDevice:@"AboutView"] bundle:nil];
+    AboutViewController *controller = [[AboutViewController alloc] initWithNibName:[UIHelper nibNameForDevice:@"AboutView"] bundle:nil];
 	
 	controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
 	[self presentModalViewController:controller animated:YES];

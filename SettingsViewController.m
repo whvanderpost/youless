@@ -15,7 +15,7 @@
 #import "NoteCell.h"
 #import "SelectCell.h"
 #import "Constants.h"
-#import "Common.h"
+#import "UIHelper.h"
 
 @implementation SettingsViewController
 
@@ -404,7 +404,7 @@
     {
         SelectCell *cell = (SelectCell *)[tableView cellForRowAtIndexPath:indexPath];
         UpdateIntervalViewController* controller = [[[UpdateIntervalViewController alloc] 
-                                                     initWithNibName:[Common nibNameForDevice:@"SelectView"]
+                                                     initWithNibName:[UIHelper nibNameForDevice:@"SelectView"]
                                                      bundle:nil 
                                                      updateInterval:cell.value] autorelease];
         controller.delegate = self;

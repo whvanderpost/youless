@@ -10,10 +10,9 @@
 
 
 @interface UIHelper : NSObject 
-{
-}
 
-// Use to show an alert with the given text and title
++ (NSString*)nibNameForDevice:(NSString*)nibNameOrNil;
++ (BOOL)is4InchRetina;
 + (void)showAlertWithText:(NSString *)text withTitle:(NSString *) title;
 
 @end
