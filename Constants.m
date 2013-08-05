@@ -18,4 +18,4 @@ float const ANIMATION_DURATION = 0.6;					// seconds
 int const NUMBER_OF_DELTA_LABELS = 3;
 int const NUMBER_OF_DELTA_LABELS_568h = 4;
 int const SIMULATOR_MODE = 0;							// 0 = NO, 1 = YES
-int const MAX_GAUGE = 18000;                            // Watt
+int const MAX_GAUGE = 24000;                            // Watt
